@@ -29,7 +29,7 @@
 	<div class="row" id="box_container">
 
 
-        <div class="ten columns">
+        <div>
 			<?php get_template_part( 'element-boxes', 'index' ); ?>
 		</div>
 		

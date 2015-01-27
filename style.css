@@ -310,20 +310,25 @@ label.required::before {
     color: black;
 }
 
-small {
-    font-size: 80%
+.button {
+	background-color: #F57D1C;
 }
 
-*/
+small {
+    font-size: 80%;
+}
+
+
+
 
 
 /*header*/
+
 #header_container {
         position: relative;
         height: auto;
-        padding-bottom: 0;
-        padding-top: 25px;
-	    background: #fff;
+        padding-bottom: 2.5em;
+        padding-top: 2em;
 }
 
 #left-col {
@@ -334,13 +339,15 @@ small {
 
 #banner {
         color: black;
+        margin-bottom: 0em;
 }
 
 #header_text {
         text-align: center;
         line-height: 148px;
         font-size: 1.4em;
-        padding-top: 1em;
+        padding-top: 0em;
+        margin-left: 2em;
 }
 
 #header_text p {		/*tagline*/
@@ -505,6 +512,7 @@ img.chiclet {
      font-weight: bold;
      line-height: 50%;
      color:  white; /*#adadcf;	/*light blue*/
+     margin-right: 2em;
 }
      
 
@@ -640,8 +648,22 @@ padding: 7px;
         display: block;
 }
 
+#welcome_container 	{
+}
+
 #welcome_container h1{
 	margin-top: 0px;
+	font-weight: normal;
+	display: inline-block;
+	line-height: 82px;
+
+}
+
+#welcome_container .button {
+	background-color: #F57D1C;
+	color: black;
+	text-decoration: none;
+
 }
         
 #box_container, #content_container {	/*the whole page content, not the element boxes*/
@@ -652,18 +674,20 @@ padding: 7px;
 /*homepage boxes*/
 /*////////////////////////////////////////////////////////////////////////////////////////////*/
   
+.box-content, .box-head, .title-box, .read-more {
+	padding-right: 3em;
+}
 
 .box-content {		/*inside of individual element boxes*/
-    float: left;
+   /* float: left;*/
 	padding-top: 10px;
 	line-height: 20px;
-    width: 100%;   /*ensures that the slideshow fills out the box_container*/
-        
+    width: 100%;   /*ensures that the slideshow fills out the box_container*/       
 }
     
 .element-box {
     padding-right: 5em;
-    padding-left: 5%;
+    padding-left: 5em;
     padding-bottom: 5%;
     }
     
@@ -673,7 +697,7 @@ padding: 7px;
 }
 
 .box-head {
-	float: left;
+	/*float: left;*/
 	padding-bottom: 20px;
 }
 
@@ -696,6 +720,10 @@ padding: 7px;
 	margin-bottom: 3px;
 }
 
+.read-more {
+	border: none;
+	padding: 0;
+}
     
 /*pages*/
 

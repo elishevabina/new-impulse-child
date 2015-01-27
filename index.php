@@ -24,58 +24,37 @@
 	
 <?php } ?>
 
+<!-- impulse has a slider here -->
 
-<!-- slider.  Display set to "none" via css; leaving this here just cause.-->
-<?php if(is_front_page()) { ?>
-
-<?php if(of_get_option('slider_boolean') == "on") { ?>
-<div id="slider_container">
-
-	<div class="row">
-
-		<div class="twelve columns">
-	
-			<?php get_template_part( 'element-slider', 'index' ); ?>
-
-		</div>
-	</div>
-</div>
-
-<?php } } ?> <!-- slider end -->
-
-
-<!--welcome:  moved to above the boxes. whole div only displays if there is a welcome text or button-->
-	<?php if((of_get_option('welcome_text') != NULL) or (of_get_option('welcome_button') != NULL) ): ?> 
+<!--welcome-->
+<?php if(of_get_option('welcome_text') != NULL): ?>
 	<div class="row" id="welcome_container">
-<hr />
+
 		<div class="nine columns">
 		
-	<h1><?php { echo of_get_option('welcome_text');} ?></h1></div>
+	<h1><?php echo of_get_option('welcome_text');?> </h1></div>
 	
-	<div class="three columns"><?php if(of_get_option('welcome_button') != NULL){ ?> 
-	<a class="button large" href="<?php if(of_get_option('welcome_button_link') != NULL){ echo of_get_option('welcome_button_link');} ?>"><?php echo of_get_option('welcome_button'); ?></a> 
-	<?php } else { }?> </div>
-</div>
-<?php endif;?> <!--welcome end--> 
+	<?php if(of_get_option('welcome_button') != NULL): ?>
+		<div class="three columns"> 
+		<a class="button large" href="<?php echo of_get_option('welcome_button_link'); ?>">
+			<?php echo of_get_option('welcome_button'); ?></a> 
+		</div>
+	<?php endif; ?>
+	 <hr />
+	</div>
+	<?php endif; ?><!--welcome end--> 
 
 
-<!-- home boxes-->
+<!-- home boxes -->
 <?php if(is_front_page()) { ?>
 	
 	<div class="row" id="box_container">
 
-	    <?php get_template_part( 'navigation' ); ?> 
-	    <!--?php the_widget( 'WP_Nav_Menu_Widget' ); ?-->
-
-        <div class="ten columns">
 			<?php get_template_part( 'element-boxes', 'index' ); ?>
-		</div>
-		
-		
 	</div>
-
-    
+	
 <!-- home boxes end -->
+
 
 
 <div class="clear"></div>

@@ -3,10 +3,10 @@
 
 		<div class="row" id="content_container">
 		
+		<div class="one column"></div>
 		
 		
-		
-			<!--right col--><div class="eight columns">
+			<!--right col--><div class="nine columns">
 		
 				<div id="right-col">
 					<?php get_template_part( 'breadcrumbs' ); ?>

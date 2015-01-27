@@ -21,10 +21,10 @@ With widget sidebar
 		<div class="row" id="content_container">
 		
 		
-		<?php get_template_part( 'navigation' ); ?>
 		
 		
-			<!--middle col--><div class="seven columns">
+		
+			<!--middle col--><div class="eight columns">
 		
 				<div id="middle-col">
 					<?php get_template_part( 'breadcrumbs' ); ?>
