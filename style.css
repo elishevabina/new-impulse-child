@@ -1,0 +1,1327 @@
+/*
+Theme Name: Impulse Child
+Theme URI: 
+Description: Child theme of Impulse for the LimmudBoston website.
+Author: Ellie Ash
+Author URI:
+Template: impulse
+Version: 1.0.0
+Tags:
+Text Domain: impulse-child
+*/
+
+@import url("../impulse/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+/*general*/
+body {
+        background: white;
+	    font: normal 12px Verdana, sans-serif;
+	    line-height:18px;
+        color: black;
+        }
+
+h1 { 
+    font-weight: bold; 
+    font-size: 30px; 
+    line-height: 36px;
+
+}
+
+h2 { 
+    font-weight: bold; 
+    font-size: 24px; 
+    line-height: 30px; 
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; 
+}
+h3 { 
+    font-weight: bold; 
+    font-size: 18px; 
+    line-height: 24px;
+    margin-top, margin-bottom: 1.1em; 
+}
+h4 { 
+    font-weight: bold; 
+    font-size: 14px; 
+    line-height: 16px;
+    margin-bottom: .5em; 
+}
+h5 {
+    margin-bottom: .5em;
+}      
+
+hr {
+	background-color: #c6c6c6;
+	border:0;
+	height: 1px;
+	margin-bottom: 18px;
+	clear:both;
+}
+
+div.hr {
+  height: 1px;
+  background: #c6c6c6;
+}
+
+div.hr2 {
+  height: 1px;
+  background: #c6c6c6;
+}
+
+div.hr hr, div.hr2 hr {
+  display: none;
+}
+
+p {
+	padding: 0 0 0.5em;
+	line-height:1.6em;
+	font-family: Verdana, sans-serif
+}
+  
+ul {
+    list-style: disc;
+    margin: 0 0 10px 0;
+    padding-bottom: .5em;
+}
+
+ul li {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+ul.bullets li {
+    padding-left: 27px;
+    background: url(images/bullet.png) no-repeat 0 0.5em;
+}
+
+
+ul.noBullets li {
+    background: none;
+    padding-left: 0;
+
+}
+
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+ol ol {
+	list-style:upper-alpha;
+}
+ol ol ol {
+	list-style:lower-roman;
+}
+ol ol ol ol {
+	list-style:lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom:0;
+}
+dl {
+	margin:0 0 24px 0;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 18px;
+}
+strong {
+	font-weight: bold;
+	color: inherit;
+}
+cite,
+em,
+i {
+	font-style: italic;
+	border: none;
+}
+big {
+	font-size: 131.25%;
+}
+ins {
+	background: #FFFFCC;
+	border: none;
+	color: #333;
+}
+del {
+	text-decoration: line-through;
+	color: #555;
+}
+blockquote {
+	font-style: italic;
+	padding: 0 3em;
+}
+blockquote cite,
+blockquote em,
+blockquote i {
+	font-style: normal;
+}
+pre {
+	background: #f7f7f7;
+	color: #222;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+}
+abbr,
+acronym {
+	border-bottom: 1px solid #666;
+	cursor: help;
+}
+ins {
+	text-decoration: none;
+}
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+	font-size: 10px;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+p,
+ul,
+ol,
+dd,
+pre,
+hr {
+	margin-bottom:10px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom:0;
+}
+pre,
+kbd,
+tt,
+var {
+	font-size: 15px;
+	line-height: 21px;
+}
+code {
+	font-size: 13px;
+}
+strong,
+b,
+dt,
+th {
+	color: inherit;
+}
+
+
+
+a, a:link {
+    color: #0A2C74;
+    outline: 0;
+    text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: underline;
+}
+    
+a:hover, a:focus, a:active {
+    color:  #F57D1C;
+    text-decoration: underline;
+}
+
+a.external, a:link.external {
+    background: url(images/external-link.png) top right no-repeat;
+    padding-right: 13px;
+    color: blue;
+}
+
+    
+/*all links starting with that, i.e. internal links
+a[href^="https://limmudboston.org"],
+#header-container a {
+	background: none;
+	color: #0A2C74;
+}
+*/
+
+.menu a, .menu a:link {
+    text-decoration: none;
+}
+
+form {
+    color: inherit;
+    font-weight: inherit;
+}
+
+form input[type="text"] {
+    max-width: 25em; 
+}
+
+/*copied from foundation.css .button class*/
+form input[type="submit"] {
+    -webkit-appearance:none; /*from foundation.css input[type=submit].button*/
+    border-radius: 10%;   /*from style.css .button*/
+    font-size: 95%;
+    padding: .5em 1.2em .6em;
+    margin: .5em;
+    outline-width: 3px;
+}
+
+label {
+    color: inherit;
+    font-weight: inherit;
+}
+
+label.required::before {
+	content:"*";
+	color: red;
+}
+
+.clear {
+    clear: both;
+}
+
+/*make anchors put the anchored text a bit down the page instead of at the very top*/
+.anchor {
+    display: block;
+    position: relative;
+    top: -8em;
+    visibility: hidden;
+    height: 0;
+}
+
+.wp-caption-text {
+    color: black;
+}
+
+small {
+    font-size: 80%
+}
+
+*/
+
+
+/*header*/
+#header_container {
+        position: relative;
+        height: auto;
+        padding-bottom: 0;
+        padding-top: 25px;
+	    background: #fff;
+}
+
+#left-col {
+	padding: 10px 20px;
+	padding-left: 0px;
+	background: #fff;
+}    
+
+#banner {
+        color: black;
+}
+
+#header_text {
+        text-align: center;
+        line-height: 148px;
+        font-size: 1.4em;
+        padding-top: 1em;
+}
+
+#header_text p {		/*tagline*/
+        font-family: arial;
+}
+
+
+#header_extras {
+        float: right;
+        text-align: right;
+        padding: 0.4em;
+}
+
+img.chiclet {
+        width: 35px;
+        padding: 0.3em;
+}
+
+#menu_container {  /*currently being used just as a decorative colored bar*/
+	position: static;
+   /* overflow: auto;*/
+	padding: 0;
+	background-color: #0A2C74; /*orange: #F57D1C;*/ /*#adadcf;*/
+	/*height: 2.5em;*/
+	width: 100%;
+	}
+ 
+#search {   /*search should be a class not an id, surely*/
+	height: 2em;
+	width:180px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    border: 1px solid #ccc;
+    float: none;
+    display: inline-block;
+	position: relative;
+}
+
+    
+#search #s {
+    color: gray;
+    width:170px;
+	height:23px;
+	border:0px;
+	margin-left:7px;
+	margin-right:10px;
+	margin-top:3px;
+	display: inline;
+	float: left;
+}
+    
+#search #s:focus {
+    color: black;
+}
+    
+#search #searchsubmit {
+   display: inline-block;
+   margin: 0;
+   padding: 0;   
+}
+
+      
+#menu_container #search {
+    border: none;
+    float: right;
+    margin: 0.25em;
+   
+}    
+
+#menu_container #search #searchsubmit {
+    display: none;  /*partly cause I can't get it to line up right*/
+    /*background:url(images/go-btn.png) no-repeat top right; 
+    TODO: would have to download and upload image above if I unchildthemed*/
+    float: right;
+    width:28px;
+	height:28px;
+	border:0px;
+	position:absolute;
+	right: -35px;  
+}
+    
+.search-results h4 {
+    margin-bottom: 0;
+}
+
+.search-results h4 a {
+    color: blue;
+} 
+
+.search-results p {
+    padding-left: 1em;
+}
+
+#logo {
+	margin: 0px 0px 0px 0px;
+}
+
+#logo2 {
+	margin: 0px 0px 0px 0px;
+}
+
+#logo img{
+	border: none;
+	margin-bottom: 10px;
+}
+
+/*not sure what this is, maybe if there's no image uploaded?*/
+#logo2{
+	text-decoration: none;
+	font-size: 42px;
+	letter-spacing: -1pt;
+	font-weight: bold;
+	font-family:arial, "Times New Roman", Times, serif;
+	text-align: left;
+	line-height: 57px;
+	padding-left: 0px;
+}
+
+#logo2 a, #slogan{
+	color: #2ba6cb;
+}
+
+#slogan{
+	text-align: left;
+	padding-left: 0px;
+}
+
+
+#header_text {
+        line-height: initial;
+}
+
+#header_text p {
+        font-size: 1em;
+}
+
+.button {
+        margin: 1em;
+        border-radius: 10%;
+}
+
+#header_buttons {
+    display: initial;
+    float: none;
+}
+/*end  header*/
+
+        
+/*main navigation */
+
+
+#nav_container {
+    /*padding-left: 0;*/
+    }
+
+
+#nav { 
+     float: right;
+     text-transform: uppercase;
+     font-family:  arial, sans;
+     font-weight: bold;
+     line-height: 50%;
+     color:  white; /*#adadcf;	/*light blue*/
+}
+     
+
+#nav a {
+    text-decoration: none;
+    padding: 1em;
+}
+
+#nav li {
+    padding-top: 0;
+    padding-bottom: 0;
+    }
+    
+#nav a, #nav a:visited {
+        color: inherit;
+        font-size: 1.3em;
+}
+
+#nav li ul li {
+	    font-size: 0.85em;
+	    padding-top: .3em;
+	    color: inherit;
+}
+
+#nav li li a, #nav li li a:visited, 
+#nav li.current_page_item li a, #nav li.current_page_item li a:visited {
+	background:	#e4e4e4;
+	border-bottom: 1px solid #aaa;
+	padding: 0.6em 1em;
+	color: #0A2C74; /*dark blue*/
+}
+
+#nav li:hover, #nav li.sfHover,
+#nav a:hover, #nav a:focus, #nav a:active,
+#nav li.current_page_item li a:hover,
+#nav li.current_page_item li a:focus,
+#nav li.current_page_item li a:active  {
+	outline: 0;
+	color: #F57D1C; /*#F2AF3A; yellow #FFF;*/
+}
+
+
+
+#nav li ul li a:hover, #nav li ul li a:focus, 
+#nav li ul li a:hover, #nav li ul li a:active {
+	outline: 0;
+	color: #F57D1C; /*orange*/
+}
+
+
+
+#nav li.current_page_item > a, 
+#nav li.current-cat > a, #nav li.current_page_item > a:visited, 
+#nav li.current-cat > a:visited {
+	color: #adadcf;	/*light blue. grey: #aaa; /*yellow #F2AF3A;*/
+}
+
+
+
+/*--slider--*/
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#slider_container {
+	background: #eee;
+	border-top: 1px solid #c6c6c6;
+}
+
+.flex-caption{
+background: #232323;	
+color: #fff;
+padding: 7px;
+}
+
+.flexslider p{
+	margin: 0px;
+}
+
+
+/*--wp-pagenavi currently not in use--*/
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.wp-pagenavi {
+	color: #464646;
+	margin-top: 30px;
+}
+
+.wp-pagenavi a {
+	margin-left: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+}
+
+.wp-pagenavi a.page {
+	padding: 2px 5px; 
+	margin: 2px;
+	text-decoration: none;
+	background: #f6f6f6;
+}
+
+.wp-pagenavi span.current {
+	padding: 2px 5px; 
+	margin: 2px;
+	font-weight: bold;
+	background: #000;
+	color: #fff;
+}
+.wp-pagenavi span.extend {
+	padding: 2px 5px; 
+	margin: 2px;
+	background: #f6f6f6;
+	text-decoration: none;
+}
+
+.wp-pagenavi span.pages {
+	padding: 2px 5px; 
+	margin: 2px;
+	background: #f6f6f6;
+}
+
+/*Home (index.php) and pages*/
+
+.crumbs {
+    position: relative;
+    top: -1.5em;
+    font-size: 80%;
+}
+
+.crumbs a {
+    color: #666;
+}
+
+#slider_container {
+        display: block;
+}
+
+#welcome_container h1{
+	margin-top: 0px;
+}
+        
+#box_container, #content_container {	/*the whole page content, not the element boxes*/
+    padding-top: 2em;
+    }
+    
+
+/*homepage boxes*/
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+
+.box-content {		/*inside of individual element boxes*/
+    float: left;
+	padding-top: 10px;
+	line-height: 20px;
+    width: 100%;   /*ensures that the slideshow fills out the box_container*/
+        
+}
+    
+.element-box {
+    padding-right: 5em;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    }
+    
+#box_container{
+	padding-top: 35px;
+	padding-bottom: 15px;
+}
+
+.box-head {
+	float: left;
+	padding-bottom: 20px;
+}
+
+.box-head img{
+	width: 100%;
+}
+
+.title-head{
+	padding-top:2px;
+}
+
+.title-box{
+	color: #333;
+	line-height: 15px;
+	text-transform: none;
+}
+
+.title-box h1 {
+    /*font-size: 25px;*/
+	margin-bottom: 3px;
+}
+
+    
+/*pages*/
+
+.post {
+	overflow: hidden;
+}
+
+.post-shadow{
+	background: url("images/post_shadow.png") no-repeat bottom;
+	height: 9px;
+	margin-bottom: 25px;
+}
+
+.post ol{
+	margin-left: 20px;
+}
+
+.post ul {
+	margin-left: 15px;
+}
+
+.post-entry {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.post-entry h1, .post-entry h2, .post-entry h3, 
+.post-entry h4, .post-entry h5, .post-entry h6 {
+    clear: none;
+}
+
+/*because i had to do the above to overwrite reset.css's styles*/
+.post-entry h1.clear, .post-entry h2.clear, .post-entry h3.clear, 
+.post-entry h4.clear, .post-entry h5.clear, .post-entry h6.clear {
+    clear: both;
+}
+
+.post-entry > h2:first-child {
+    margin-top: 0.75em;
+}
+
+.post-entry ul { margin: 0 0 10px 10px; }
+
+.post-entry ul.noBullets li {
+    background: none;
+}
+
+.post-entry ul li {
+	display: block;
+	margin: 5px 0;
+	padding: 0 0 0 27px;
+	background: url(images/bullet.png) no-repeat 0 .5em;
+}
+
+.post-entry ol {
+	list-style: decimal;
+	list-style-position: inside;
+	margin: 0 0 18px 3em;
+}
+
+.post-entry ol li { 
+	list-style: decimal;
+ }
+
+.post-head {
+	margin-bottom: 5px;
+	padding-top: 15px;
+}
+
+.post-head h1 a, .post-head h1 {
+	text-decoration:none;
+	color:#000;
+	margin: 0px;
+	font-size: 27px;
+}
+
+.post-head h1 a:hover {
+	color:#777;
+}
+
+.post-thumb img {
+	border: 0px solid #ebebeb;
+}
+
+.post-entry img{
+	margin-bottom: 10px;
+	height:auto;
+  	max-width:100% !important;
+}
+
+.post-entry .bio h2, .post-entry .bio h3, .post-entry .bio h4{
+	margin-top: 2em;
+	margin-bottom: 0;
+}
+
+.post-head-notfound h1, .post-head-404 h1, .post-head-archive h1, .post-head-search h1 {
+	margin-bottom: 10px;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000;
+	font-size: 27px;
+}
+
+/* content */
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+#content_container{
+	padding-top: 15px;
+}
+
+#content_container table {
+	border: 1px solid #e7e7e7;
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
+	
+}
+#content_container tr th,
+#content_container thead th {
+	color: #888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 10px;
+}
+#content_container tr td {
+
+	padding: 6px 10px;
+}
+#content_container tr.odd td {
+	background: #f2f7fc;
+}  
+
+
+
+
+/*shabbat template*/
+
+h2.shabbat.supertitle {	/*"the REST of Limmud"*/
+   margin-top: .2em;
+   color: #0A2C74;
+}
+
+.shabbat.title {
+	margin-bottom: 0;
+}
+
+.shabbat.subtitle {
+	margin-top: 0;
+    font-style: italic;
+    font-size: 22px;
+}
+
+.shabbat.location {
+    padding-top: 1em;
+}
+
+.shabbat.logistics h5 {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.shabbat.logistics {
+    font-size: 13px;
+}
+
+.shabbat.logistics p {
+    font-size: 13px;
+}
+
+.shabbat.logistics ul li {
+    font-size: 13px;
+}
+
+.about-cong {
+    margin-bottom: 0;
+    padding-top: 1em;
+}
+
+.cong-description {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-top: 0;
+    font-size: 13px;
+}
+
+.cong-description p, .cong-description a {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.map-text {
+    width: 300px;	/*should match .acf-map width*/
+}
+
+.map-text p {
+    margin-top: .5em;
+}
+
+
+
+/*gallery-wp*/
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#gallery-wp a{
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.gallery-caption {
+	margin: 0 0 5px;
+}
+
+
+/*columns plugin*/
+.column {
+    padding: 0;
+}
+
+
+/*sidebar*/
+
+#sidebar {
+	padding:0px 20px 20px 0px;
+	word-wrap: break-word;
+}
+
+#sidebar ul  {
+	list-style: none;
+}
+
+#sidebar ul li {
+    background: none;
+}
+
+/*advanced custom fields*/
+.acf-map {
+	width: 300px;
+	height: 300px;
+	border: #ccc solid 1px;
+	margin: 20px 0 0 0;
+}
+
+.gm-style img { max-width: none; }
+
+
+
+/*--widget-formatting*/
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*general*/
+
+/*contains each widget*/
+.widget-container-primary {
+	background: #fff;
+	padding-bottom: 20px;
+	margin-top: 2em;
+
+}
+
+
+.widget-container-primary h3 {
+	color: #fff; 
+	overflow: hidden;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 0;
+	margin: 0;
+}
+
+.widget-container-primary .widget-title{
+	color: #333;
+	display:block;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+/*lists within widgets*/
+.widget-container-primary ul li {
+	padding: 0px 0px 7px 26px;
+	margin-left: 12px;
+	margin-right: 15px;
+}
+
+.widget-container-primary ul li {
+	background: url("images/bullet.png") no-repeat 0px 2px;
+}
+
+.widget-container-primary ul li ul li{
+	margin-left: 12px;
+}
+
+
+.widget-container-primary ul li a	{
+	text-decoration:none;
+	color: #0A2C74;
+}
+
+.widget-container-primary ul li a:hover	{
+	text-decoration:none;
+	color:  #F57D1C;
+}
+
+/*widgets*/
+
+.textwidget {
+	padding: 5px 11px;
+}
+
+#calendar_wrap {
+	text-align: left;
+	padding: 8px 15px;
+	margin: 0;
+}
+
+#wp-calendar {
+	text-align:	left;
+	margin-top:	5px;
+	width:	100%;
+}
+
+#footer-widget #wp-calendar a{
+	color: white;
+}
+
+#footer-widget #wp-calendar a:hover{
+	color: #ccc;
+}
+
+#wp-calendar caption{
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: .4em;
+}
+
+#wp-calendar td{
+	padding:10px;
+}
+
+#wp-calendar #today{
+	font-weight: bold; color: #FFF;
+}
+#wp-calendar th{
+	color: #fff;
+}
+
+.widget_tag_cloud a{
+	text-decoration: none;
+	margin: 5px;
+	line-height: 24px;
+	
+}
+
+
+/*footer*/
+#footer {
+	padding: 5px 20px;
+	background: #ddd;
+}
+
+#footer-container{
+	padding: 5px 20px;
+	background: #fff;
+	border-top: 1px solid #c6c6c6;
+	font-size:11px;
+}
+
+/*footer-bars contain/are each widget area*/
+#footer-bar1 {
+	padding-right: 40px;
+}
+#footer-bar2 {
+	padding-right: 40px;
+}
+#footer-bar3 {
+}
+
+
+#footer-widget {
+    padding: 0;
+    color:#6f6f6f;
+}
+
+#footer-widget ul {
+	margin-left: 0px;
+	}
+	
+#footer-widget .widget-container h3 {
+    color: #a5a5a5;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	font-weight: bold;
+    font-size: 14px;
+}
+#footer-widget .widget-container ul li {
+	padding: 5px 0px;
+	background: none;
+	}
+#footer-widget .widget-container ul li a	{
+	color:#2ba6cb;
+}
+#footer-widget .widget-container ul li a:hover	{
+	color: #ccc;
+}
+
+#footer-widget .textwidget {
+	padding: 5px 0px;
+	line-height: 23px;
+}
+#footer-widget .textwidget p {
+    font-size: 12px;
+}
+
+#footer-widget ul.xoxo {
+    margin-bottom: 0;
+}
+
+#footer-widget form input[type="text"] {
+    height: 22px;
+    width: 55%;
+}
+
+/*not relevant to me*/
+#footer-widget #search {
+	width:120px;
+	height:28px;
+	background: #222;
+	margin-left: 0px;
+	position: relative;
+	border: 1px solid #666;
+}
+#footer-widget #search #s {
+	width:110px;
+	height:23px;
+	border:0px;
+	margin-left:7px;
+	margin-right:10px;
+	margin-top:3px;
+	color:#fff;
+	display: inline;
+	background: #222;
+	float: left;
+}
+
+
+#footer-info {
+    color:#ccc;
+	text-align:left;
+	background: #1b1b1b;
+	padding: 20px 0;
+    padding-bottom: .1em;
+}
+#footer-info a{
+	text-decoration:none;
+	color: #fff;
+}
+#footer-info a:hover{
+	color: #ebebeb;
+}
+#footer-info #copyright {
+    float: left;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+.scroll-top {
+	text-align:right;
+}
+
+/*Alignments */
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 22px;
+	margin-top: 9px;
+}
+
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 22px;
+	margin-top: 8px;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft,
+.alignright,
+.aligncenter,
+img.alignleft,
+img.alignright,
+img.aligncenter
+{
+	margin-bottom: 10px;
+}
+
+
+.wp-caption {
+	border: none;
+	background: #f1f1f1;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	margin-bottom: 15px;
+	padding: 4px;
+	-moz-border-radius: 0;
+	-khtml-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	max-width:96%;
+}
+.wp-caption img {
+	border:0 none;
+	margin: 0px;
+	height:auto;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption p.wp-caption-text {
+	font-size:11px;
+	line-height:18px;
+	margin:0;
+	padding:0 4px 5px;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-smiley {
+	margin:0;
+}
+
+/*portfolio slideshow*/
+
+.ps-carousel-next, .ps-carousel-prev {
+    background: rgba(0, 0, 0, 0.65);
+}
+/*yes this is a hack but display is hard*/
+.ps-carousel-next {
+    margin-right: 1em;
+}
+
+/*linkview*/
+
+ul li.lv-list-item-logos {
+	background: none;
+}
+
+div.lv-item-image-logos img {
+	height: 6.5em;
+	padding-right: 1em;
+	
+}
+/*get linkview list with logos to display nicely*/
+/* note: the linkview code producing the structure here is in includes/sc_linkview.php */
+ul.lv-link-list-logos {
+	
+}
+
+	ul li.lv-list-item-logos {
+		/*border: solid green;*/
+		
+	}
+	
+			div.lv-link-logos {
+				height: 7em;
+				clear: both;	/*if floating the image*/
+				position: relative;
+				margin-top: 1em;
+				/*border: solid black;*/
+			}
+			
+				div.lv-item-name-logos {
+					position: absolute;
+					right: 0;
+					top: 1.5em;
+					margin: auto;
+					display: inline-block;
+					font-size: 1.3em;
+					width: 75%;
+					/*border: solid red;*/
+				}
+					div.lv-item-name-logos a {
+						/*vertical-align: 50%;*/
+					}
+				
+				div.lv-item-image-logos {
+					position: absolute;
+					left: 0;
+					display: inline-block;
+					height: 100%;
+					/*border: solid blue;*/
+
+				}
+				
+					div.lv-item-image-logos a {
+						height: 100%;
+					}
+					
+						div.lv-item-image-logos img {
+							height: 6.5em;
+							max-width: 8em !important; /*to override the parent theme.  
+							But this is a bit of a hack anyway b/c the length in em is
+							dependent on the width of the column working out, which it 
+							seems to even when i resize the window.*/
+							padding-right: 1em;
+							
+						}
+						
+				div.lv-item-description-logos {
+					position: absolute;
+					right: 0;
+					bottom: 0; /*be careful; if the link name is too long this will fuck up*/
+				}
