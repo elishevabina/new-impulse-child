@@ -29,7 +29,7 @@
 
 <!-- impulse has a slider here -->
 
-<!--welcome-->
+<!--welcome
 <?php if(get_field('welcome_text') != NULL): ?>
 	<div class="row" id="welcome_container">
 
@@ -45,13 +45,13 @@
 	<?php endif; ?>
 	 <hr />
 	</div>
-	<?php endif; ?><!--welcome end--> 
+	<?php endif; ?>--><!--welcome end--> 
 
 
 <!-- home boxes -->
 <?php if(is_front_page()) { ?>
 	
-	<div class="row" id="box_container">
+	<div id="box_container">
 
 			<?php get_template_part( 'element-boxes', 'index' ); ?>
 	</div>
